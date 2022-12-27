@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davins Fitness</title>
+  </head>
+  <script src="C:\Users\hp\OneDrive\Desktop\DavinBackend-20221227T022310Z-001\DavinBackend\backend.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Poppins:wght@800&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Abyssinica SIL", serif;
+      font-family: "Poppins", sans-serif;
+      color: white;
+      margin: 0px;
+      padding: 0px;
+      background: url("images/bg.jpg");
+    }
+    .left img {
+      height: 5px;
+      height: 115px;
+      margin-left: -4px;
+      margin-top: -20px;
+      width: 205px;
+    }
+    .left div {
+      font-family: "Poppins", sans-serif;
+
+      font-size: 17px;
+      color: black;
+      margin: -31px 19px 0px 37px;
+    }
+    .left {
+      position: absolute;
+      display: inline-block;
+      left: 10px;
+      top: 20px;
+     
+    }
+    .mid {
+      display: block;
+      width: 74%;
+      margin: 0px auto;
+      margin-left: 300px;
+      
+    }
+    .right {
+      position: absolute;
+      display: inline-block;
+      right: 34px;
+      top: 3px;
+     
+    }
+    .navbar {
+      display: inline-block;
+    }
+    .navbar li {
+      display: inline-block;
+      font-size: 25px;
+    }
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      padding: 34px 23px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+      text-decoration: underline;
+      color: grey;
+    }
+    .btn {
+      font-family: "Poppins", sans-serif;
+      background-color: black;
+      color: white;
+      padding: 0px 25px 0px 25px;
+      border: 2px solid grey;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-left: 35px;
+      margin-top: 22px;
+    }
+
+    .btn:hover {
+      background-color: grey;
+    }
+    .container {
+      border: 5px solid grey;
+      margin: 106px 80px;
+      padding: 75px;
+      width: 647px;
+      border-radius: 28px;
+    }
+    .formgroup input {
+      text-align: center;
+      display: block;
+      width: 508px;
+      padding: 1px;
+      border: 2px solid black;
+      margin: 3px auto;
+      font-size: 25px;
+      border-radius: 8px;
+    }
+  </style>
+  <body>
+    <header class="header">
+      <div class="left">
+        <img src="images/logo.jpg" alt="" />
+        <div>Davins Fitness</div>
+      </div>
+      <div class="mid">
+        <ul class="navbar">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Fitness Calculator</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <button class="btn">Call us now</button>
+        <button class="btn">Email us</button>
+      </div>
+    </header>
+    <div class="container">
+      <h1>JOIN THE BEST GYM IN BANGALORE NOW</h1>
+      
+        <div class="formgroup">
+          <input id="name"  type="text" action ="{%url 'saveEnquiry'%}" name=""  placeholder="ENTER YOUR NAME" />
+        </div>
+        <div class="formgroup">
+          <input id="age" type="text" name="" placeholder="ENTER YOUR AGE" name="age" />
+        </div>
+        <div class="formgroup">
+          <input id="gender" type="text" name="" placeholder="ENTER YOUR GENDER" name="gender" />
+        </div>
+        <div class="formgroup">
+          <input id="locality" type="text" name="" placeholder="ENTER YOUR LOCALITY" name="locality" />
+        </div>
+        <button class="btn" id="submit" onclick="saveToDb()">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
